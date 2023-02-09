@@ -77,9 +77,16 @@
 
 ## [Структуры/Structures](doc/structures.md)
 
+
 ---
 
 ## [Перечисление/Enum](doc/enum.md)
+
+* [Enums](doc/enum.md#enum)
+  * [Option<T>](doc/enum.md#option)
+  * [Enum and match](doc/enum.md#enum-and-match)
+  * [Explicit let if in match](doc/enum.md#explicit-let-if-in-match)
+  * [Universal parameters in match](doc/enum.md#universal-parameters-in-match)
 
 ---
 

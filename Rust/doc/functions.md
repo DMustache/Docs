@@ -86,7 +86,7 @@ fn function_name() -> return_type {
 
 ---
 
-# Arrow functions
+# [Arrow functions](https://doc.rust-lang.org/rust-by-example/fn/closures.html)
 
 Стрелочные функции могут быть использованны как в структурах, так и в функциях. Они могут использовать переменные, которые находятся в окружении, где инициалищированна стрелочная функция.
 
@@ -101,3 +101,7 @@ fn main() {
     println!("{}", minus_one(temp)); // 42
 }
 ```
+
+
+JVT 0 Token
+GRPC WEB
