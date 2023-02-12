@@ -77,6 +77,13 @@
 
 ## [Структуры/Structures](doc/structures.md)
 
+* [struct](doc/structures.md#struct)
+  * [Tuple struct without named fields](doc/structures.md#tuple-struct-without-named-fields-to-create-different-types)
+  * [Unit-like struct without any fields](doc/structures.md#unit-like-structs-without-any-fields)
+* [Ownership on structs](doc/structures.md#ownership-on-structs)
+  * [Defining methods](doc/structures.md#defining-methods)
+  * [Associated functions](doc/structures.md#associated-functions)
+* [Example](doc/structures.md#example)
 
 ---
 
@@ -99,8 +106,5 @@
 ---
 
 - [ ] !TODO update: create hints
-- [ ] !TODO fix: edit sentences
 - [ ] !TODO add: vector
-- [ ] !TODO add: arrow functions стрелочные функции / arrow functions / [anonymous functions](https://doc.rust-lang.org/book/ch13-01-closures.html)
-!TODO fix/update: functions
 - [ ] !TODO complete: [Generics](doc/generics.md)
