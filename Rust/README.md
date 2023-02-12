@@ -97,6 +97,15 @@
 
 ---
 
+## [Code organization](doc/code_organization.md)
+
+* [Packages]
+* [Crates]
+* [Modules]
+* [Scope]
+
+---
+
 ## [Коллекции/Collections](doc/collections.md)
 
 ---

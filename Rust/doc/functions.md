@@ -100,8 +100,5 @@ fn main() {
     println!("{}", num_plus(temp)); // 44
     println!("{}", minus_one(temp)); // 42
 }
+
 ```
-
-
-JVT 0 Token
-GRPC WEB
