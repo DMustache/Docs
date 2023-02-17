@@ -82,6 +82,7 @@
   * [Unit-like struct without any fields](doc/structures.md#unit-like-structs-without-any-fields)
 * [Ownership on structs](doc/structures.md#ownership-on-structs)
   * [Defining methods](doc/structures.md#defining-methods)
+    * [Traits](doc/structures.md#traits)
   * [Associated functions](doc/structures.md#associated-functions)
 * [Example](doc/structures.md#example)
 

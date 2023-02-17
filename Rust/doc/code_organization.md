@@ -225,7 +225,7 @@ pub fn eat_at_restaurant() {
 
 Так как еда готовится на кухне, то там реализуем `Breakfast`, который можно заказать в `eat_at_restaurant`
 
-```
+```rust
 mod back_of_house {
     pub struct Breakfast {
         pub toast: String,
@@ -261,24 +261,92 @@ pub fn eat_at_restaurant() {
 
 # Разделение модулей на разные файлы
 
+Наш готовый проект ресторана:
+
+__src/lib.rs__
+```rust
+mod front_of_house {
+    pub mod hosting {
+        pub fn add_to_waitlist() {}
+    }
+
+    mod serving {
+    }
+}
+
+mod back_of_house {
+
+    pub enum Appetizer {
+        Soup,
+        Salad,
+    }
+
+    pub struct Breakfast {
+        pub toast: String,
+        seasonal_fruit: String,
+    }
+
+    impl Breakfast {
+        pub fn summer(toast: &str) -> Breakfast {
+            Breakfast {
+                toast: String::from(toast),
+                seasonal_fruit: String::from("peaches"),
+            }
+        }
+    }
+
+}
+
+use crate::front_of_house::hosting;
+use crate::front_of_house::hosting::add_to_waitlist;
+
+pub fn eat_at_restaurant() {
+    // Absolute path
+    crate::front_of_house::hosting::add_to_waitlist();
+
+    // Relative path
+    front_of_house::hosting::add_to_waitlist();
+
+    hosting::add_to_waitlist();
+
+    add_to_waitlist();
+
+    let order1 = back_of_house::Appetizer::Soup;
+    let order2 = back_of_house::Appetizer::Salad;
+
+}
+```
+
 Перепишем наш проект ресторана.
 
 __src/lib.rs__
 ```rust
 mod front_of_house;
+use crate::front_of_house::hosting;
+use crate::front_of_house::hosting::add_to_waitlist;
 
-pub use crate::front_of_house::hosting;
+mod back_of_house;
 
 pub fn eat_at_restaurant() {
+    // Absolute path
+    crate::front_of_house::hosting::add_to_waitlist();
 
+    // Relative path
+    front_of_house::hosting::add_to_waitlist();
+
+    hosting::add_to_waitlist();
+
+    add_to_waitlist();
+
+    let order1 = back_of_house::Appetizer::Soup;
+    let order2 = back_of_house::Appetizer::Salad;
 }
 ```
 
 __src/front_of_house.rs__
 ```rust
-pub mod hosting{
-    pub fn add_to_waitlist() {}
-}
+pub mod hosting;
+pub mod serving;
 ```
 
 Далее извлечем `hosting` в другой файл
@@ -286,6 +354,32 @@ pub mod hosting{
 __src/front_of_house/hosting.rs__
 ```rust
 pub fn add_to_waitlist() {}
+```
+
+__src/front_of_house/serving.rs__
+```rust
+```
+
+__src/back_of_house.rs__
+```rust
+pub enum Appetizer {
+    Soup,
+    Salad,
+}
+
+pub struct Breakfast {
+    pub toast: String,
+    seasonal_fruit: String,
+}
+
+impl Breakfast {
+    pub fn summer(toast: &str) -> Breakfast {
+        Breakfast {
+            toast: String::from(toast),
+            seasonal_fruit: String::from("peaches"),
+        }
+    }
+}
 ```
 
 Так, дерево модулей осталось прежним, а работать стало проще.
