@@ -1,0 +1,5 @@
+* [OOP](Other/oop.md)
+  * [Abstraction](doc/oop.md#abstraction)
+  * [Inheritance](doc/oop.md#inheritance)
+  * [Polymorphism](doc/oop.md#polymorphism)
+  * [Encapsulation](doc/oop.md#encapsulation)
