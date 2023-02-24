@@ -88,7 +88,7 @@
 
 ---
 
-## [Перечисление/Enum](doc/enum.md)
+## [Перечисление/Enum](doc/enum.md#enum)
 
 * [Enums](doc/enum.md#enum)
   * [Option<T>](doc/enum.md#option)
@@ -98,23 +98,50 @@
 
 ---
 
-## [Code organization](doc/code_organization.md)
+## [Code organization](doc/code_organization.md#code-organization)
 
-* [Packages]
-* [Crates]
-* [Modules]
-* [Scope]
-
----
-
-## [Коллекции/Collections](doc/collections.md)
-
----
-
-## [Ошибки/Errors](doc/errors.md)
+  * [Packages and crates](doc/code_organization.md#packages-and-crates)
+* [Scope on modules](doc/code_organization.md#scope-on-modules)
+  * [Group code in linked modules](doc/code_organization.md#group-code-in-linked-modules)
+  * [Road for link to the element in modules tree](doc/code_organization.md#road-for-link-to-the-element-in-modules-tree)
+    * [Using `use`](doc/code_organization.md#using-use)
+    * [Reexport names from `pub` `use`](doc/code_organization.md#reexport-names-from-pub-use)
+    * [Using nested paths with `use`](doc/code_organization.md#using-nested-paths-with-use)
+  * [Example](doc/code_organization.md#example)
+* [Separating Modules into Different Files](doc/code_organization.md#separating-modules-into-different-files)
 
 ---
 
-- [ ] !TODO update: create hints
-- [ ] !TODO add: vector
-- [ ] !TODO complete: [Generics](doc/generics.md)
+## [Коллекции/Collections](doc/collections.md#collections)
+
+* [Sequences](doc/collections.md#sequences)
+  * [Vec](doc/collections.md#vec)
+  * [VecDeque](doc/collections.md#vecdeque)
+  * [LinkedList](doc/collections.md#linkedlist)
+* [Maps](doc/collections.md#maps)
+  * [HashMap](doc/collections.md#hashmap)
+  * [BTreeMap](doc/collections.md#btreemap)
+* [Sets](doc/collections.md#sets)
+  * [HashSet](doc/collections.md#hashset)
+  * [BTreeSet](doc/collections.md#btreeset)
+* [Misc](doc/collections.md#misc)
+  * [BinaryHeap](doc/collections.md#binaryheap)
+
+---
+
+## [Ошибки/Errors](doc/errors.md#errors)
+
+* [Unrecoverable Errors with `panic!`](doc/errors.md#unrecoverable-errors-with-panic)
+  * [Unwinding the Stack or Aborting in Response to a Panic](doc/errors.md#unwinding-the-stack-or-aborting-in-response-to-a-panic)
+* [Recoverable Errors with Result](doc/errors.md#recoverable-errors-with-result)
+  * [Shortcuts for Panic on Error: `unwrap` and `expect`](doc/errors.md#shortcuts-for-panic-on-error-unwrap-and-expect)
+  * [Propagating Errors](doc/errors.md#propagating-errors)
+  * [Catching panic with `catch_unwind`](doc/errors.md#catching-panic-with-catch_unwind)
+    * [A Shortcut for Propagating Errors: the `?` Operator](doc/errors.md#a-shortcut-for-propagating-errors-the--operator)
+      * [Where The `?` Operator Can Be Used](doc/errors.md#where-the--operator-can-be-used)
+
+---
+
+## [Declarations](doc/declarations.md#declarations)
+
+---
